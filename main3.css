@@ -1,0 +1,350 @@
+*{
+    background-color: darkgray;
+    padding: 0;
+    margin: 0;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li,a,button{
+    font-family: 'Geologica', sans-serif;   
+    font-weight: 400;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    background-color: #ffffff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: #ffffff;
+}
+
+.logo {
+    font-size: 50px;
+    cursor: pointer;
+    margin-right: 65px;
+}
+
+.logoHT {
+    display: none;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.account__nav {
+    background: #ffffff;
+}
+
+.nav__links {
+    background: #ffffff;
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a {
+    transition: all 0.1s ease-in-out 0s;
+}
+
+.nav__links li a:hover {
+    color: #292929;
+    border-bottom: 3px solid #292929;
+}
+
+.cta {
+    color: white;
+    font-size: 25px;
+    padding: 9px 15px;
+    background: black;
+    border-radius: 15px;
+    border: none;
+    width: auto;
+    height: auto;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+.cta:hover {
+    background: #292929;
+    
+}
+
+.hamburger {
+    position: relative;
+    display: none;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+
+.LogIn {
+    margin: 0px 15px;
+    color: black;
+    border: none;
+    width: auto;
+    height: auto;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    background: #ffffff;
+}
+
+.mobile-nav {
+    display: none;
+    z-index: 1000;
+}
+
+
+
+span {
+    color: orange;
+}
+
+.titlebox {
+    padding: 40px;
+    align-items: center;
+    text-align: center;
+}
+
+.mainSignUpButton {
+    color: white;
+    font-size: 30px;
+    padding: 9px 20px;
+    background: black;
+    border-radius: 20px;
+    border: none;
+    width: auto;
+    height: auto;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+@media (max-width: 1220px){
+    .LogIn{
+        display: none;
+    }
+}
+
+@media (max-width: 1080px){
+
+    .card {
+        width: 330px;
+        height: 440px;
+    }
+    
+    .cta {
+        display: none;
+    }
+    .nav__links {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    .logo{
+        display: block;
+    }
+    .hamburger .bar, .hamburger::after, .hamburger::before {
+        width: 100%;
+        height: 5px;
+        display: block;
+        background-color: black;
+        margin: 6px 0px;
+        transition: 0.4s;
+        content: ' ';
+        border-radius: 50px;
+    }
+    .hamburger.is-active:before {
+        transform: rotate(-45deg) translate(-9px, 7px);
+    }
+    .hamburger.is-active:after {
+        transform: rotate(45deg) translate(-8px, -7px);
+    }
+    .hamburger.is-active .bar {
+        opacity: 0;
+    }
+    .mobile-nav.is-active {
+        width: 100%;
+        position: fixed;
+        display: block;
+        transition: 0.3s; 
+    }
+
+
+    .mobile-nav-links li {
+        padding: 0px 20px;
+        padding: 20px;
+        transition: 0.1s;
+    }
+    .mobile-nav-links li a{
+        transition: 0.1s;
+    }
+    .mobile-nav-links li a:hover {
+        border-bottom: 3px solid #292929;
+    }
+    .MobileSignUp{
+        padding: 9px 15px;
+        z-index: 200;
+        border-radius: 15px;
+        background: black;
+        cursor: pointer;
+        border: 0;
+        transition: 0.2s;
+    }
+    .MobileSignUp h3{
+        color: white;
+        font-weight: 100;
+    }
+}
+
+
+.container {
+    display: flex;
+    margin: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.card__image {
+    height: 180px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-bottom: 15px;
+    background-size: cover;
+    transition: 0.2s ease-in-out;
+}
+
+.card {
+    width: 300px;
+    height: 420px;
+    margin: 15px;
+    background: white;
+    border-radius: 15px;
+    opacity: 80%;
+    transition: 0.2s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2), 0px 6px 20px 0px rgba(0,0,0,0.19);
+    cursor: pointer;
+}
+
+.card:hover {
+    opacity: 100%;
+    scale: 1.05;
+}
+
+.card:hover .card__image {
+    height: 190px;
+}
+
+.card:hover .buy__now {
+    margin-top: 5px;
+}
+
+
+.card__title {
+    margin-left: 15px;
+    background: white;
+    font-family: 'Geologica', sans-serif; 
+    font-weight: 200;
+}
+
+.card__info {
+    margin-right: 15px;
+    margin-left: 17px;
+    background: white;
+    font-family: 'Geologica', sans-serif; 
+    margin-top: 8px; 
+    font-size: 16px;
+
+}
+
+.buy__now {
+    transition: 0.2s ease-in-out;
+    border-radius: 15px;
+    padding: 10px 10px;
+    color: white;
+    text-align: center;
+    font-family: 'Geologica', sans-serif; 
+    text-decoration: none;
+    margin-top: 15px;
+    background: black;
+    display: block;
+    margin: 10px 80px;
+}
+
+.buy__now:hover {
+    scale: 0.96;
+}
+
+
+
+.image__1 {
+    background-image: url("https://th.bing.com/th/id/R.7f711f614931e5116be9adb818bb1191?rik=gRoeV2HBor3JQQ&pid=ImgRaw&r=0");
+}
+
+.image__2 {
+    background-image: url("https://th.bing.com/th/id/R.2381b88dfb2d8264834b351864ae23f1?rik=7kC0V5KBsnJggw&pid=ImgRaw&r=0");
+}
+
+.image__3 {
+    background-image: url("https://i.pinimg.com/originals/49/14/14/49141413b3e22ad8ac4be02087dba265.jpg");
+}
+
+@media (max-width: 410px) {
+    .card {
+        height: 430px;
+    }
+    .buy__now {
+        font-size: 14px;
+    }
+    .logo {
+        font-size: 40px;
+    }
+}
+
+@media (max-width:373px) {
+    .card {
+        height: 450px;
+    }
+    .buy__now {
+        margin: 10px 70px;
+    }
+}
+
+@media (max-width:349px) {
+    .buy__now {
+        margin: 10px 60px;
+    }
+}
+
+@media (max-width:343px) {
+    .card {
+        height: 470px;
+    }
+}
+
+@media (max-width:328px) {
+    .card {
+        height: 490px;
+    }
+    .buy__now {
+        margin: 10px 50px;
+    }
+}
